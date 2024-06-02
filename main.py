@@ -76,8 +76,8 @@ def getBeijinTime():
         hour = find.group(1)
         min_ratio = max(math.ceil((int(hour) / 3) - 1), 0)
         max_ratio = math.ceil(int(hour) / 3)
-        min_1 = 500 * min_ratio
-        max_1 = 500 * max_ratio
+        min_1 = 5000 * min_ratio
+        max_1 = 5000 * max_ratio
         min_1 = int(K * min_1)
         max_1 = int(K * max_1)
     else:
@@ -215,7 +215,6 @@ def main(_user, _passwd, min_1, max_1):
     # print(response)
     result = f"[{now}]\n账号：{user[:3]}****{user[7:]}\n修改步数（{step}）[" + response['message'] + "]\n"
     print(result)
-    print("hello world")
     return result
 
 
